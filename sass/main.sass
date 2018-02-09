@@ -1,0 +1,310 @@
+@font-face
+	font-family: GothaPro
+	src: url('/fonts/GothaProLig.otf')
+	font-weight: 100
+
+@font-face
+	font-family: GothaPro
+	src: url('/fonts/GothaProReg.otf')
+	font-weight: 200
+
+@font-face
+	font-family: GothaPro
+	src: url('/fonts/GothaProMed.otf')
+	font-weight: 400
+
+@font-face
+	font-family: GothaPro
+	src: url('/fonts/GothaProBla.otf')
+	font-weight: 800
+
+$dark: rgb(77, 77, 77)
+
+%box-size
+	box-sizing: border-box
+	width: 100%
+
+%vertical-elemts
+	display: table-cell
+	vertical-align: middle
+
+.left-block
+	float: left
+	display: table
+
+.right-block
+	float: right
+	display: table
+
+@mixin transition($item)
+	-webkit-transition: all $item ease
+	-moz-transition: all $item ease
+	-o-transition: all $item ease
+	transition: all $item ease
+
+*
+	margin: 0
+	padding: 0
+
+body
+	background: #ffffff
+	font-family: "GothaPro", "Open Sans", sans-serif
+	font-weight: 200
+
+a
+	text-decoration: none
+
+
+.header-sup
+	background: #{$dark}
+	@extend %box-size
+	height: 40px
+	display: table
+
+.footer
+	background: #{$dark}
+	@extend %box-size
+	height: 255px
+	padding: 40px 0 15px 0
+
+
+.container
+	width: 940px
+	margin: 0 auto
+
+.header-menu
+	font-size: 12px
+	color: rgb(179, 179, 179)
+	line-height: 40px
+	list-style-type: none
+	font-weight: 100
+
+.header-menu__item
+	float: left
+	margin-right: 20px
+	display: table
+
+	&:after
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAKUlEQVQImQXBsREAEBAAsHDOrKqvrKDT+Eksp5eUce5CIBsmOqJi4yE/h4sGMQAlvlAAAAAASUVORK5CYII=') center no-repeat
+		width: 3px
+		height: 3px
+		content: ''
+		display: inline-block
+		vertical-align: middle
+		margin-left: 20px
+
+	.header-menu__item-link
+		color: rgb(179, 179, 179)
+		text-decoration: none
+		@include transition(.3s)
+		cursor: pointer
+
+		&:hover
+			color: rgb(255, 255, 255)
+			border-bottom: 1px solid #7a7a7a
+
+.last-of-row
+	margin: 0 !important
+
+	&:after
+		background: none
+		margin: 0
+
+.header-search
+	float: right
+	line-height: 40px
+	background-color: rgb(64, 64, 64)
+	width: 260px
+	padding: 0 13px 0 20px
+	@extend %box-size
+
+	.header-search__input
+		width: 212px
+		float: left
+		font-size: 12px
+		color: rgb(128, 128, 128)
+		height: 40px
+		box-sizing: border-box
+		border: none
+		background-color: rgb(64, 64, 64)
+		outline: none
+
+.loupe
+	float: right
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAA/klEQVQokZXRzSrEYRQG8IdSyNrGJLGzxlZcBXJHrOwsXYMUJRZcgo3UlHxs1KRsfDTzs/BO/We8o5w6dd7nPc9zvoIUb+EAbXzgEUdYbuQMeD9YR8ePPeAcd+X9jt1R5BZe8YYtjDUSNvFcOlmtkQ9KhZ0R7a2gi9MauY37oYrDfolPTDbx8SRzSe6SyGi7TTKRZLYJjid5SdL6g5gk80l6SToDaDmHspxay4tlYVe1mZfL51Nlo0u4Qa8m3g+2y0K6uMAhjotor9x+H9M1crCGM3yVMbq4LhX3CnbRFKjNOIUFzDSw6XKuAYFRd635L4H/kIcFTv5L7gucYOMbY7aEEgL735MAAAAASUVORK5CYII=') center no-repeat
+	width: 15px
+	height: 15px
+	cursor: pointer
+	margin-top: 12px
+
+.header-sub
+	width: 100%
+	background: rgb(247, 247, 247)
+	height: 100px
+	display: table
+
+	.left-block
+		height: 100px
+
+	.logotype
+		float: left
+		height: 100px
+		display: table
+		margin-right: 30px
+
+		.logotype__icon
+			background: url('data:image/png;base64,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') center no-repeat
+			width: 60px
+			height: 60px
+			@extend %vertical-elemts
+
+		.logotype__title
+			@extend %vertical-elemts
+			text-transform: uppercase
+			font-size: 24px
+			color: rgb(104, 145, 176)
+			padding-left: 15px
+			font-weight: 800
+
+.header-sub__desc
+	font-size: 12px
+	color: rgb(128, 128, 128)
+	line-height: 14px
+	@extend %vertical-elemts
+	font-weight: 100
+
+.phone-icon
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAADtklEQVRYhbXYXYhVVRQH8N+cCceByiAp+8Agk0YqUIpMKVALwT5sinrwpcCiRCrrqacM6qVegsn0wdKHIOoltawMfbAP0TREwyDFDDLLCn1oJK5Kag9rHed4nXvvmUH/cDl7n7PXWv+999prrX27Fg2sMwLcifvzeTOuxDj8g6PYhx34Ip+1cEmNMb1YiCWY3GLMuPzdiHl4FT9jAKvQaGeg6EDgYezFO0ngDyzH4+jDFejKZ1++X57jbsKylO9vZ6SrxXb04G08k/3deB2f4FQH4tCN+ViKqfluJV7AiebBw63E5diQBI6LbbgDa2oSkOPW4vaUP576NqT+tiTGpPBsHMZMsSJ1jTfjdMrPTH2zU/+YdiSWYQ4O4W7sGqXxZuzCPal3TtoZlkS/WLIGHsIvF4hAiQOpt5F2zjprSaJXHCd4WTjixcDu1C/t9VZJLMTEHLTiIhEosUJsz0Q8VSWxJJ+vGb0T1sUpcdyJI6vAdBGIfhdxoBV+xZn8vVV5fwzbUmFPTSKfioA2GdMLzM0Pa8WRaoWxlfZtlfYS7MEbIl9MrEHilIg7MLfAXdn5qoPg4Up7SqW9L4lMEZHyS/VWpLQ3o6go/LGD0A+V9mlDyW9LErleZNgbsKgGidJeXyHSMefOdDiU/nII9+K/7F+NnWJ5j+IDLKhBorQ3vjAUywc7CH2G3/AN9lfe/y1mfpUIz98ZSlrtUNq7rKh0zkssTTiJV8Qs5zV9+0uk9E1Y7VwnboXS3rFCLCFcU0PwfazHh86fbU8SqYvS3pECP2Xn1hqCZ/CEKFS+Fo4IM/Cn2JpNzo0jrVDa21uIPYRZNQSJenK2qA0+F/Flg6iuxuM+vFRDT2lvW4GN2XlE53KvREP4xgIxo3E15Up0pz3YWGC78PbrRE1ZF2fwEW7BY8Jf9uJf4ajtMD/t7cf2cuZlGl+aLEeCk/gYT4rAdykmtBnfLU4ZUXWdXf7VOCg8fvEISYwUizEt7a2qkmgYSudvqhdsRoOpqV/aa1RJwDq8K6qd9eIicyExKfX2pp2zd43m0/AcvhXJaItYtguBaU16n69+bCZxEg9is4hoW0WxUvfoNqNIg1tT32Y8oOkCNJzyQZEbVoocMCCyZL/6J6c7x+8UJ2Bs6ptnmETZ6kJ8As+KSDggHGqtKMnWiIJkjwjVgyIZTRAV1yw8imtT10G8mPLDotVdtIpePC28eVKnwRUcyAm8p8OtvM5fAw1xY1rm/P8nxotVGMQRUWF9L1Zwu4iqHfE/pxbVu31RjxQAAAAASUVORK5CYII=') center no-repeat
+	width: 33px
+	height: 33px
+	@extend %vertical-elemts
+
+.phone-title
+	font-size: 10px
+	color: rgb(128, 128, 128)
+	line-height: 16px
+	font-weight: 100
+
+.number-phone
+	font-size: 20px
+	color: rgb(77, 77, 77)
+	line-height: 16px
+
+.left-block .group
+	@extend %vertical-elemts
+	padding-left: 15px
+
+.phone
+	margin-left: 52px
+
+.feedback-form
+	border: 3px solid rgb(104, 145, 176)
+	width: 180px
+	height: 45px
+	line-height: 42px
+	text-transform: uppercase
+	text-decoration: none
+	@extend %vertical-elemts
+	box-sizing: border-box
+	border-radius: 40px
+	text-align: center
+	float: right
+	font-size: 12px
+	color: rgb(104, 145, 176)
+	cursor: pointer
+	@include transition(.3s)
+	margin-top: 28px
+	font-weight: 400
+
+	&:hover
+		background: rgb(104, 145, 176)
+		color: white
+
+
+.main-menu
+	background-color: rgb(104, 145, 176)
+	@extend %box-size
+	height: 60px
+	display: table
+
+.horizontal-menu
+	font-size: 12px
+	text-align: center
+	color: rgb(255, 255, 255)
+	list-style-type: none
+	@extend %box-size
+	display: table
+	line-height: 14px
+	font-weight: 100
+
+	.horizontal-menu__item
+		float: left
+		height: 60px
+		padding-left: 10px
+		padding-right: 10px
+		display: table
+		margin-right: 16px
+
+	.horizontal-menu__link
+		color: rgb(255, 255, 255)
+		text-decoration: none
+		display: table-cell
+		vertical-align: middle
+
+.footer-menu
+	float: left
+	margin-right: 45px
+
+.vertical-menu
+	list-style-type: none
+	font-size: 12px
+	color: rgb(204, 204, 204)
+	font-weight: 100
+	margin-right: 40px
+	float: left
+
+	.vertical-menu__item
+		margin-top: 15px
+		float: left
+		clear: both
+
+	.vertical-menu__link
+		color: rgb(204, 204, 204)
+		border-bottom: 1px solid transparent
+
+		&:hover
+			color: rgb(104, 145, 176)
+			border-bottom: 1px solid rgb(104, 145, 176)
+
+
+.title-menu
+	font-size: 18px
+	color: rgb(255, 255, 255)
+	line-height: 14px
+	display: table
+
+.number-phone_white
+	color: rgb(255, 255, 255)
+
+.phone-title_white
+	color: rgb(179, 179, 179)
+	line-height: 16px
+
+.footer .right-block
+	width: 220px
+	text-align: center
+
+	.feedback-form
+		width: 100%
+		margin-top: 15px
+
+.feedback-form_call
+	background: rgb(104, 145, 176)
+	color: white
+
+.copyrighted
+	float: left
+	font-size: 12px
+	color: rgb(128, 128, 128)
+	line-height: 14px
+	margin-top: 30px
