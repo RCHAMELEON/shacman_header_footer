@@ -49,8 +49,7 @@
 
 body {
   background: #ffffff;
-  font-family: "GothaPro", "Open Sans", sans-serif;
-  font-weight: 200;
+  font-family: "GothaPro", sans-serif;
 }
 
 a {
@@ -65,7 +64,7 @@ a {
 
 .footer {
   background: #4d4d4d;
-  height: 255px;
+  height: 260px;
   padding: 40px 0 15px 0;
 }
 
@@ -75,7 +74,7 @@ a {
 }
 
 .header-menu {
-  font-size: 12px;
+  font-size: 13px;
   color: #b3b3b3;
   line-height: 40px;
   list-style-type: none;
@@ -133,7 +132,7 @@ a {
 .header-search .header-search__input {
   width: 212px;
   float: left;
-  font-size: 12px;
+  font-size: 13px;
   color: gray;
   height: 40px;
   box-sizing: border-box;
@@ -177,14 +176,14 @@ a {
 
 .header-sub .logotype .logotype__title {
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 23px;
   color: #6891b0;
   padding-left: 15px;
   font-weight: 800;
 }
 
 .header-sub__desc {
-  font-size: 12px;
+  font-size: 13px;
   color: gray;
   line-height: 14px;
   font-weight: 100;
@@ -197,14 +196,13 @@ a {
 }
 
 .phone-title {
-  font-size: 10px;
+  font-size: 11px;
   color: gray;
-  line-height: 16px;
-  font-weight: 100;
+  margin-bottom: 7px;
 }
 
 .number-phone {
-  font-size: 20px;
+  font-size: 21px;
   color: #4d4d4d;
   line-height: 16px;
 }
@@ -214,7 +212,7 @@ a {
 }
 
 .phone {
-  margin-left: 52px;
+  margin-left: 57px;
 }
 
 .feedback-form {
@@ -228,7 +226,7 @@ a {
   border-radius: 40px;
   text-align: center;
   float: right;
-  font-size: 12px;
+  font-size: 13px;
   color: #6891b0;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
@@ -236,7 +234,7 @@ a {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   margin-top: 28px;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .feedback-form:hover {
@@ -251,7 +249,7 @@ a {
 }
 
 .horizontal-menu {
-  font-size: 12px;
+  font-size: 13px;
   text-align: center;
   color: white;
   list-style-type: none;
@@ -266,7 +264,7 @@ a {
   padding-left: 10px;
   padding-right: 10px;
   display: table;
-  margin-right: 16px;
+  margin-right: 20px;
 }
 
 .horizontal-menu .horizontal-menu__link {
@@ -283,7 +281,7 @@ a {
 
 .vertical-menu {
   list-style-type: none;
-  font-size: 12px;
+  font-size: 13px;
   color: #cccccc;
   font-weight: 100;
   margin-right: 40px;
@@ -291,7 +289,7 @@ a {
 }
 
 .vertical-menu .vertical-menu__item {
-  margin-top: 15px;
+  margin-top: 16px;
   float: left;
   clear: both;
 }
@@ -307,7 +305,7 @@ a {
 }
 
 .title-menu {
-  font-size: 18px;
+  font-size: 20px;
   color: white;
   line-height: 14px;
   display: table;
@@ -339,8 +337,8 @@ a {
 
 .copyrighted {
   float: left;
-  font-size: 12px;
+  font-size: 13px;
   color: gray;
   line-height: 14px;
-  margin-top: 30px;
+  margin-top: 35px;
 }
