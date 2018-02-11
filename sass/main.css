@@ -1,10 +1,26 @@
 @font-face {
-  font-family: Got;
-  src: url("/fonts/gotham.ttf");
-  font-weight: normal;
-  font-style: normal;
+  font-family: GothaPro;
+  src: url("/fonts/GothaProLig.otf");
+  font-weight: 100;
 }
 
+@font-face {
+  font-family: GothaPro;
+  src: url("/fonts/GothaProReg.otf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: GothaPro;
+  src: url("/fonts/GothaProMed.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: GothaPro;
+  src: url("/fonts/GothaProBla.otf");
+  font-weight: 800;
+}
 
 .header-sup, .footer, .header-search, .main-menu, .horizontal-menu {
   box-sizing: border-box;
@@ -248,7 +264,7 @@ a {
   padding-left: 10px;
   padding-right: 10px;
   display: table;
-  margin-right: 20px;
+  margin-right: 19px;
 }
 
 .horizontal-menu .horizontal-menu__link {
