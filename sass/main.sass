@@ -263,14 +263,13 @@ a
 		height: auto
 		width: auto
 		background: #4d4d4d
-		border-top: 1px solid #989898
 		top: 60px
 		left: 0
 		display: none
 
 		.children-menu__item
 			display: table
-			border-bottom: 1px solid #2b2b2b
+			border-bottom: 1px solid #474747
 			width: 158px
 			float: left
 			height: 40px
@@ -280,8 +279,13 @@ a
 
 		.children-menu__link
 			@extend %vertical-elemts
-			color: rgb(255, 255, 255)
+			color: #cccccc
 
+			&:hover
+				color: white
+
+.last-of-column
+	border-bottom: 1px solid transparent !important
 
 .footer-menu
 	float: left
